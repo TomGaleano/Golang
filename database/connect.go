@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/TomGaleano/Distophy/models"
+	"github.com/TomGaleano/Golang/models"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

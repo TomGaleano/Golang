@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/TomGaleano/Distophy/blob/main/golang-test/models/"
+	"github.com/TomGaleano/Golang/models"
 	"github.com/gofiber/fiber/v2"
 )
 

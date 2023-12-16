@@ -1,4 +1,4 @@
-module github.com/TomGaleano/Distophy
+module github.com/TomGaleano/Golang
 
 go 1.21.4
 

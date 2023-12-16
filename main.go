@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/TomGaleano/Distophy/database"
+	"github.com/TomGaleano/Golang/database"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 )
