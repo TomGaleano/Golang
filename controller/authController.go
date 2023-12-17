@@ -12,6 +12,7 @@ import (
 	"github.com/TomGaleano/Golang/models"
 	"github.com/TomGaleano/Golang/util"
 	"github.com/gofiber/fiber/v2"
+	"github.com/golang-jwt/jwt"
 )
 
 func validateEmail(email string) bool {
@@ -109,4 +110,8 @@ func Login(c *fiber.Ctx) error {
 		"user":    user,
 	})
 
+}
+
+type Claims struct {
+	jwt.StandardClaims
 }
