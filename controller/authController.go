@@ -2,6 +2,7 @@ package controller
 
 import (
 	"fmt"
+	"log"
 	"regexp"
 	"strings"
 
@@ -47,25 +48,20 @@ func Register(c *fiber.Ctx) error {
 
 	//Create user
 	user := models.User{
-		Fistname: data["first_name"].(string),
-		Lastname: data["last_name"].(string),
-		Phone:    data["phone"].(string),
-		Email:    strings.TrimSpace(data["email"].(string)),
+		Firstname: data["first_name"].(string),
+		Lastname:  data["last_name"].(string),
+		Phone:     data["phone"].(string),
+		Email:     strings.TrimSpace(data["email"].(string)),
 	}
 	user.SetPassword(data["password"].(string))
 	err := database.DB.Create(&user)
 	if err != nil {
-		c.Status(500)
-		return c.JSON(fiber.Map{
-			"error":   err,
-			"message": "Unable to create user.",
-		})
-	} else {
-		c.Status(201)
-		return c.JSON(fiber.Map{
-			"user":    user,
-			"message": "User created succesfully.",
-		})
+		log.Println(err)
 	}
+	c.Status(201)
+	return c.JSON(fiber.Map{
+		"user":    user,
+		"message": "User created succesfully.",
+	})
 
 }
