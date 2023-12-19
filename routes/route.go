@@ -9,6 +9,10 @@ import (
 func Setup(app *fiber.App) {
 	app.Post("/api/register", controller.Register)
 	app.Post("/api/login", controller.Login)
+
 	app.Use(middleware.IsAuthenticated)
 	app.Post("/api/createpost", controller.CreatePost)
+	app.Get("/api/allpost", controller.AllPost)
+	app.Get("/api/detailpost/:id", controller.DetailPost)
+	app.Put("/api/updatepost/:id", controller.UpdatePost)
 }
