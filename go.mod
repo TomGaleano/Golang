@@ -1,5 +1,7 @@
 module github.com/TomGaleano/Golang
 
+// +heroku goVersion go1.21.4
+
 go 1.21.4
 
 require (
