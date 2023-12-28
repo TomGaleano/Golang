@@ -34,7 +34,7 @@ func CreatePost(c *fiber.Ctx) error {
 
 func AllPost(c *fiber.Ctx) error {
 	page, _ := strconv.Atoi(c.Query("page", "1"))
-	limit := 5
+	limit := 6
 	offset := (page - 1) * limit
 	var total int64
 	var getblog []models.Blog
