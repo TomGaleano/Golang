@@ -7,7 +7,6 @@ go 1.21.4
 require (
 	github.com/gofiber/fiber/v2 v2.51.0 // direct
 	github.com/joho/godotenv v1.5.1 // direct
-	github.com/mattn/go-sqlite3 v1.14.18 // direct
 	golang.org/x/crypto v0.16.0 // direct
 	gorm.io/driver/mysql v1.5.2 // direct
 	gorm.io/gorm v1.25.5 // direct
@@ -30,5 +29,4 @@ require (
 	github.com/valyala/fasthttp v1.51.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
-	gorm.io/driver/sqlite v1.5.4 // indirect
 )
