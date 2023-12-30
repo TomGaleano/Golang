@@ -9,10 +9,9 @@ import (
 
 func Setup(app *fiber.App) {
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     "*", // Allow all origins
-		AllowMethods:     "GET,POST,PUT,DELETE,OPTIONS",
-		AllowHeaders:     "Origin, Content-Type, Accept",
-		AllowCredentials: true,
+		AllowOrigins: "*", // Allow all origins
+		AllowMethods: "GET,POST,PUT,DELETE,OPTIONS",
+		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
 	app.Post("/api/register", controller.Register)
 	app.Post("/api/login", controller.Login)
