@@ -15,7 +15,7 @@ var DB *gorm.DB
 func Connect() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loagding .env file.")
+		log.Fatal("Error loading .env file.")
 	}
 	dsn := os.Getenv("DSN")
 	database, _ := gorm.Open(mysql.Open(dsn), &gorm.Config{})
